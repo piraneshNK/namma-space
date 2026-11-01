@@ -1,0 +1,32 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; height: 100%; background: #05070d; color: #e2e8f0;
+  font: 15px/1.45 system-ui, -apple-system, 'Segoe UI', sans-serif; overflow: hidden; overscroll-behavior: none; }
+canvas { display: block; touch-action: none; }
+
+.panel { position: fixed; z-index: 10; }
+.panel.center { inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px; padding: 24px; text-align: center; background: rgba(5, 7, 13, .72); backdrop-filter: blur(6px); cursor: pointer; }
+.panel h1 { margin: 0; font-size: 28px; letter-spacing: .02em; }
+.dim { color: #94a3b8; margin: 0; }
+.tiny { font-size: 12px; margin: 0; }
+.keys { color: #cbd5e1; max-width: 520px; margin: 6px 0 0; }
+.panel a { color: #22d3ee; }
+code { background: #0f172a; padding: 1px 6px; border-radius: 6px; }
+.go { margin-top: 6px; padding: 12px 28px; font-size: 16px; border-radius: 12px; border: 1px solid #22d3ee;
+  background: #0e7490; color: #fff; cursor: pointer; }
+.go:hover { background: #0891b2; }
+.bar { width: min(320px, 70vw); height: 6px; border-radius: 6px; background: #1e293b; overflow: hidden; }
+.bar > div { height: 100%; background: #22d3ee; transition: width .2s; }
+
+.cross { position: fixed; z-index: 5; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px;
+  border-radius: 50%; background: rgba(255, 255, 255, .75); box-shadow: 0 0 0 1px rgba(0, 0, 0, .35); pointer-events: none; }
+.hint { position: fixed; z-index: 5; left: 12px; bottom: 12px; padding: 6px 10px; border-radius: 8px;
+  background: rgba(5, 7, 13, .6); color: #94a3b8; font-size: 12px; pointer-events: none; }
+
+.zone { position: fixed; z-index: 6; top: 0; bottom: 0; touch-action: none; }
+.zone.left { left: 0; width: 45%; }
+.zone.right { right: 0; width: 55%; }
+.joy { position: fixed; z-index: 7; width: 112px; height: 112px; border-radius: 50%; pointer-events: none;
+  border: 2px solid rgba(255, 255, 255, .35); background: rgba(255, 255, 255, .08); display: grid; place-items: center; }
+.joy-knob { width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, .5); }
